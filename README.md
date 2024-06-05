@@ -16,7 +16,7 @@ int main() {
     // 이진화
     Mat binaryImage;
     threshold(image, binaryImage, 128, 255, THRESH_BINARY);
-    Mat element = getStructuringElement(MORPH_RECT, Size(40, 40));
+    Mat element = getStructuringElement(MORPH_RECT, Size(5, 5));//40
     // 닫기 연산(Closing)
     Mat closedImage;
     
@@ -39,3 +39,10 @@ int main() {
 
     return 0;
 }
+이진화
+열린 연산(Opening)
+ 닫기 연산(Closing)
+500x500 사이즈로 리사이즈
+최종적으로 100x100 사이즈로 리사이즈
+일단 이진화 후에 열기연산 닫기연산 진행후에 진행해보려고 합니다.
+숫자의 필기체에따른 이음 부분을 수정하려고합니다. 판병하기 위한 기본 절차
